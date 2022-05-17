@@ -1,16 +1,26 @@
 {
   "files": {
-    "main.css": "/if-coordination-app/static/css/main.eeb4ae37.css",
-    "main.js": "/if-coordination-app/static/js/main.a6d3b41b.js",
+    "main.css": "/if-coordination-app/static/css/main.c5fb57f6.css",
+    "main.js": "/if-coordination-app/static/js/main.cb1632c5.js",
     "static/js/787.4ce9d71c.chunk.js": "/if-coordination-app/static/js/787.4ce9d71c.chunk.js",
-    "static/media/logo.svg": "/if-coordination-app/static/media/logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
+    "static/media/logo.svg": "/if-coordination-app/static/media/logo.654640635043d34c303d10c8504860e7.svg",
+    "static/media/mother-with-child.svg": "/if-coordination-app/static/media/mother-with-child.747d22de675537ab1461.svg",
+    "static/media/busy-man.svg": "/if-coordination-app/static/media/busy-man.03415edeb1ed565b6097.svg",
+    "static/media/happy-boy.svg": "/if-coordination-app/static/media/happy-boy.03a3682b9892769530a3.svg",
+    "static/media/girl-on-bicycle.svg": "/if-coordination-app/static/media/girl-on-bicycle.958bd2f7abca9044937d.svg",
+    "static/media/tourism.svg": "/if-coordination-app/static/media/tourism.a365e3db54f452c85303.svg",
+    "static/media/finance.svg": "/if-coordination-app/static/media/finance.313f09f5ef7bd637f9b8.svg",
+    "static/media/clerk.svg": "/if-coordination-app/static/media/clerk.b3a4fe32c6d54d62bcaf.svg",
+    "static/media/home.svg": "/if-coordination-app/static/media/home.293948eab00cec878188.svg",
+    "static/media/news.svg": "/if-coordination-app/static/media/news.022935b7bc403ed9f59f.svg",
+    "static/media/archive.svg": "/if-coordination-app/static/media/archive.4a9b70e8d574855a118f.svg",
     "index.html": "/if-coordination-app/index.html",
-    "main.eeb4ae37.css.map": "/if-coordination-app/static/css/main.eeb4ae37.css.map",
-    "main.a6d3b41b.js.map": "/if-coordination-app/static/js/main.a6d3b41b.js.map",
+    "main.c5fb57f6.css.map": "/if-coordination-app/static/css/main.c5fb57f6.css.map",
+    "main.cb1632c5.js.map": "/if-coordination-app/static/js/main.cb1632c5.js.map",
     "787.4ce9d71c.chunk.js.map": "/if-coordination-app/static/js/787.4ce9d71c.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.eeb4ae37.css",
-    "static/js/main.a6d3b41b.js"
+    "static/css/main.c5fb57f6.css",
+    "static/js/main.cb1632c5.js"
   ]
 }
