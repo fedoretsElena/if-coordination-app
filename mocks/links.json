@@ -4,16 +4,16 @@
     "value": "/"
   }, {
     "name": "Вимушено переселеним особам",
-    "value": "/"
+    "value": "/resettlers"
   }, {
     "name": "Волонтерам",
-    "value": "/"
+    "value": "/volunteers"
   }, {
     "name": "Мешканцям і гостям міста",
-    "value": "/"
+    "value": "/city-leisure"
   }, {
     "name": "Власникам бізнесу",
-    "value": "/"
+    "value": "/business"
   }, {
     "name": "Офіційні джерела",
     "value": "/"
@@ -27,8 +27,7 @@
     "name": "Мапа прихистків",
     "value": "/"
   }],
-  "social": [{
-    "link": "facebook.com",
-    "icon": "facebook"
-  }]
+  "socialNetworks": {
+    "fb": "https://facebook.com"
+  }
 }
