@@ -1,0 +1,13 @@
+@import './../../../styles/variables';
+
+.social-media {
+  border: 1px solid $light;
+  border-radius: 4px;
+  font-size: 1rem;
+  font-weight: 700;
+  text-align: center;
+
+  a:hover {
+    color: $dark-5;
+  }
+}

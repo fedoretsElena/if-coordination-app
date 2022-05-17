@@ -26,7 +26,7 @@ const AidCategoriesAccordion = ({list, title = 'Категорії допомо�
                 {category.text}
               </pre>
             }
-            {category.link && <a className="d-block m-auto button mt-3" href={category.link} target="_blank">Детальніше</a>}
+            {category.link && <a className="d-block m-auto button details-button mt-3" href={category.link} target="_blank">Детальніше</a>}
           </AccordionItemPanel>
       </AccordionItem>
     )}

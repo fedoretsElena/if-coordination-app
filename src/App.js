@@ -41,7 +41,7 @@ function App() {
         {/*<Route path="*" component={NotFound} />*/}
       </Routes>
 
-      <Footer contacts={contacts} links={links.nav} socialMedia={links.social} />
+      <Footer contacts={contacts} links={links.nav} socialNetworks={links.socialNetworks} />
     </div>
   );
 }

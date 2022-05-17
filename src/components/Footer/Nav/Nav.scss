@@ -1,0 +1,17 @@
+@import './../../../styles/variables';
+
+.nav {
+  &-link {
+    color: $dark-5;
+
+    &:hover {
+      color: $light;
+    }
+  }
+
+  &-list {
+    display: grid;
+    grid-gap: 0 2rem;
+    grid-template-columns: 1fr 1fr;
+  }
+}

@@ -1,0 +1,19 @@
+@import './../../../styles/variables';
+
+.contacts {
+  color: $dark-5;
+
+  &-grid {
+    gap: 24px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  &-title {
+    color: $light;
+  }
+
+  a:hover {
+    color: $light;
+  }
+}
