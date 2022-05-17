@@ -1,0 +1,33 @@
+{
+  "nav": [{
+    "name": "Головна",
+    "value": "/"
+  }, {
+    "name": "Вимушено переселеним особам",
+    "value": "/resettlers"
+  }, {
+    "name": "Волонтерам",
+    "value": "/volunteers"
+  }, {
+    "name": "Мешканцям і гостям міста",
+    "value": "/city-leisure"
+  }, {
+    "name": "Власникам бізнесу",
+    "value": "/business"
+  }, {
+    "name": "Офіційні джерела",
+    "value": "/"
+  }, {
+    "name": "Про нас",
+    "value": "/"
+  }, {
+    "name": "Новини міста",
+    "value": "/"
+  }, {
+    "name": "Мапа прихистків",
+    "value": "/"
+  }],
+  "socialNetworks": {
+    "fb": "https://facebook.com"
+  }
+}

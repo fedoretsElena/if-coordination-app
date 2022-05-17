@@ -1,0 +1,28 @@
+{
+  "title": "Офіційні джерела",
+  "list": [{
+    "text": "Офіційний сайт міста",
+    "iconName": "home.svg",
+    "link": "https://www.mvk.if.ua/"
+  }, {
+    "text": "Оперативні новини",
+    "iconName": "news.svg",
+    "link": "https://www.oper-info.if.ua/"
+  }, {
+    "text": "Центр надання адміністративних послуг",
+    "iconName": "archive.svg",
+    "link": "https://www.cnap.if.ua/"
+  }, {
+    "text": "Центр підтримки релокованого бізнесу",
+    "iconName": "busy-man.svg",
+    "link": "https://www.savebusinessnow.if.ua/"
+  },{
+    "text": "Туристичний сайт міста",
+    "iconName": "tourism.svg",
+    "link": "https://iftravel.com.ua/"
+  },{
+    "text": "Допомогти фінансово",
+    "iconName": "finance.svg",
+    "link": ""
+  }]
+}
