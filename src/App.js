@@ -1,5 +1,5 @@
 import { Route, Routes } from 'react-router-dom';
-import { Fragment, useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 
 import './App.scss';
 import { Header, Breadcrumbs, Footer } from './components';

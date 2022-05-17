@@ -23,7 +23,6 @@ const Home = () => {
          fetch(`${API_PATH}home/officialSources.json`, { headers }).then(response => response.json()),
      ]).then(res => {
         const results = res.map(({value}) => value);
-        console.log(results);
         [setHeadline, setAidCategories, setOfficialSources].forEach((func, index) => func(results[index]));
       });
    }, [])
