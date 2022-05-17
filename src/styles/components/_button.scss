@@ -1,0 +1,20 @@
+@use "sass:map";
+
+@import 'src/styles/variables';
+@import 'src/styles/spacing';
+
+.button {
+  color: $secondary;
+  min-width: 126px;
+  max-width: fit-content;
+  text-align: center;
+  background: $light;
+  border: 2px solid $secondary;
+  border-radius: 4px;
+  padding: .3rem map.get($spacers, 3);
+
+  &:hover {
+    background: $secondary;
+    color: $light;
+  }
+}

@@ -1,0 +1,9 @@
+@import './../../styles/spacing';
+
+.aid-categories {
+  padding: $base-size-spacer * 1.5;
+
+  .button {
+    min-width: 190px;
+  }
+}

@@ -1,0 +1,7 @@
+@import '../variables';
+
+.link {
+  &:hover {
+    color: $dark-4;
+  }
+}

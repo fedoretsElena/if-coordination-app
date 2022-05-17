@@ -1,0 +1,6 @@
+@import './../../../styles/variables';
+@import './../../../styles/spacing';
+
+.aid-category {
+  padding: map-get($spacers, 4) map-get($spacers, 3);
+}

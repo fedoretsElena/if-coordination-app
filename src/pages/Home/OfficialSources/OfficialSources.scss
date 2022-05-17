@@ -1,0 +1,45 @@
+@import './../../../styles/variables';
+@import './../../../styles/spacing';
+
+.official-sources {
+  padding: map-get($spacers, 4) map-get($spacers, 3);
+}
+
+.source-item {
+  height: 120px;
+  background: $light;
+  margin-right: 0;
+  margin-left: auto;
+  width: calc(100% - 20px);
+  position: relative;
+
+  &__icon-container {
+    min-width: 100px;
+    height: 110px;
+    border-radius: 4px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    position: absolute;
+    top: -9px;
+    left: -20px;
+  }
+
+  &__text {
+    margin-left: 96px;
+  }
+
+  &:nth-child(odd) {
+    .source-item__icon-container {
+      background: $icon-1;
+    }
+  }
+
+  &:nth-child(even) {
+    .source-item__icon-container {
+      background: $icon-2;
+    }
+  }
+}

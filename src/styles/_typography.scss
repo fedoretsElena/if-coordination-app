@@ -1,0 +1,53 @@
+@use "sass:map";
+
+@import 'mixins';
+@import 'variables';
+
+$custom-typography-config: (
+   header-1:      define-typography-level(3.125rem, 3.25rem, 700),
+   header-2:      define-typography-level(1.75rem, 2.5rem, 700),
+   header-3:      define-typography-level(1.25rem, 1.4rem, 700), // 1.75?
+   header-4:      define-typography-level(1rem, 1.4rem, 700),
+   body-2:        define-typography-level(1rem, 1.5rem, 600),
+   body-1:        define-typography-level(1rem, 1.5rem, 400),
+   caption:       define-typography-level(0.875rem, 1rem, 400),
+   button:        define-typography-level(1rem, 1.5rem, 700),
+   link:          define-typography-level(1rem, 1.5rem, 700),
+   breadcrumb:    define-typography-level(0.75rem, 1rem, 400),
+);
+
+body {
+   font: map.get($custom-typography-config, 'body-1');
+}
+
+h1 {
+   font: map.get($custom-typography-config, 'header-1');
+}
+
+h2 {
+   font: map.get($custom-typography-config, 'header-2');
+}
+
+h3 {
+   font: map.get($custom-typography-config, 'header-3');
+}
+
+h4 {
+   font: map.get($custom-typography-config, 'header-4');
+}
+
+.button {
+   font: map.get($custom-typography-config, 'button');
+}
+
+.caption {
+   font: map.get($custom-typography-config, 'caption');
+}
+
+.link {
+   font: map.get($custom-typography-config, 'link');
+}
+
+pre {
+   white-space: pre-line;
+}

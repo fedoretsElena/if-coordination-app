@@ -1,0 +1,27 @@
+@import './../../styles/variables';
+@import './../../styles/spacing';
+
+.back-button {
+  z-index: 2;
+  top: $base-size-spacer;
+  right: $base-size-spacer;
+  position: fixed;
+
+  width: 40px;
+  height: 36px;
+  cursor: pointer;
+  font-size: 1.5rem;
+  border-radius: 4px;
+  background: $light;
+  color: $secondary;
+  border: 2px solid $secondary;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &:hover {
+    color: $light;
+    background: $secondary;
+  }
+}

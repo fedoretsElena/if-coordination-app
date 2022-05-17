@@ -1,0 +1,30 @@
+@use "sass:map";
+
+@import 'src/styles/typography';
+@import 'src/styles/spacing';
+
+.accordion {
+  color: $dark;
+  padding: $base-size-spacer / 2 $base-size-spacer $base-size-spacer * 1.5 $base-size-spacer;
+
+  &__button {
+    color: $dark-4;
+    cursor: pointer;
+    padding: $base-size-spacer 0;
+    font: map.get($custom-typography-config, 'header-3');
+    line-height: 1.75rem;
+    border-bottom: 1px solid $dark;
+
+    &[aria-expanded="true"], &:hover {
+      color: $dark;
+    }
+  }
+
+  &__panel {
+    padding: $base-size-spacer 0;
+
+    pre {
+      white-space: pre-line;
+    }
+  }
+}

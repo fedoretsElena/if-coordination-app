@@ -1,0 +1,26 @@
+@import '../../styles/spacing';
+@import '../../styles/variables';
+
+.accommodation {
+  padding: map-get($spacers, 4) map-get($spacers, 3);
+}
+
+.shelter {
+  padding: $base-size-spacer * 1.5 map-get($spacers, 3);
+  margin-bottom: $base-size-spacer * 1.5;
+
+  &__grid {
+    display: grid;
+    gap: $base-size-spacer;
+    grid-template-columns: $base-size-spacer * 1.5 1fr;
+  }
+
+  &__name {
+    line-height: 1.75rem;
+  }
+
+  &__icon {
+    font-size: 1.5rem;
+    color: $secondary;
+  }
+}
