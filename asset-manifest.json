@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/if-coordination-app/static/css/main.3824fe32.css",
+    "main.css": "/if-coordination-app/static/css/main.2fd36bc3.css",
     "main.js": "/if-coordination-app/static/js/main.9c562614.js",
     "static/js/787.4ce9d71c.chunk.js": "/if-coordination-app/static/js/787.4ce9d71c.chunk.js",
     "static/media/logo.svg": "/if-coordination-app/static/media/logo.654640635043d34c303d10c8504860e7.svg",
@@ -15,12 +15,12 @@
     "static/media/news.svg": "/if-coordination-app/static/media/news.022935b7bc403ed9f59f.svg",
     "static/media/archive.svg": "/if-coordination-app/static/media/archive.4a9b70e8d574855a118f.svg",
     "index.html": "/if-coordination-app/index.html",
-    "main.3824fe32.css.map": "/if-coordination-app/static/css/main.3824fe32.css.map",
+    "main.2fd36bc3.css.map": "/if-coordination-app/static/css/main.2fd36bc3.css.map",
     "main.9c562614.js.map": "/if-coordination-app/static/js/main.9c562614.js.map",
     "787.4ce9d71c.chunk.js.map": "/if-coordination-app/static/js/787.4ce9d71c.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.3824fe32.css",
+    "static/css/main.2fd36bc3.css",
     "static/js/main.9c562614.js"
   ]
 }
