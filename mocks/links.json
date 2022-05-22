@@ -27,6 +27,79 @@
     "name": "Мапа прихистків",
     "value": "/"
   }],
+  "extendedNav": [{
+    "name": "Головна",
+    "value": "/"
+  }, {
+    "name": "Вимушено переселеним особам",
+    "value": "/resettlers",
+    "sublinks": [{
+      "name": "Державна реєстрація",
+      "value": "/"
+    }, {
+      "name": "Соціальна допомога",
+      "value": "/"
+    }, {
+      "name": "Працевлаштування",
+      "value": "/"
+    }, {
+      "name": "Розміщення, тимчасові прихистки",
+      "value": "#/resettlers/accommodation"
+    }, {
+      "name": "Харчування й гуманітарна допомога",
+      "value": "/"
+    }, {
+      "name": "Психологічна допомога",
+      "value": "/"
+    }, {
+      "name": "Медична допомога",
+      "value": "/"
+    }]
+  }, {
+    "name": "Мешканцям і гостям міста",
+    "value": "/city-leisure",
+    "sublinks": [{
+      "name": "Івано-Франківськ туристичний",
+      "value": "https://iftravel.com.ua/"
+    }, {
+      "name": "Долучитися до волонтерства",
+      "value": "/"
+    },{
+      "name": "Курси української мови",
+      "value": "Lorem ipsum"
+    }, {
+      "name": "Безкоштовні екскурсії",
+      "value": "Lorem ipsum"
+    }, {
+      "name": "Курси стрільби",
+      "value": "Lorem ipsum"
+    }, {
+      "name": "Курси з першої домедичної допомоги",
+      "value": "Lorem ipsum"
+    }, {
+      "name": "Курси з першої домедичної допомоги",
+      "value": "Lorem ipsum"
+    }, {
+      "name": "Працевлаштування",
+      "value": "Lorem ipsum"
+    }]
+  }, {
+    "name": "Власникам бізнесу",
+    "value": "/business", 
+    "sublinks": [{
+      "name": "Релокація бізнесу",
+      "value": "Lorem ipsum"
+    }, {
+      "name": "Програми підтримки",
+      "value": "Lorem ipsum"
+    }, {
+      "name": "Грантові можливості",
+      "value": "Lorem ipsum"
+    }]
+  }, {
+    "name": "Офіційні джерела",
+    "value": "/"
+  }],
   "socialNetworks": {
     "fb": "https://facebook.com"
   }
