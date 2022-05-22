@@ -3,7 +3,7 @@ import { MdPhone, MdLocationPin, MdOutlineLanguage } from 'react-icons/md';
 import { FaFacebookF } from 'react-icons/fa';
 
 import './Accommodation.scss';
-import { API_PATH } from './../../api-config';
+import { API_PATH } from './../../configs/api.config';
 
 const Accommodation = () => {
   const [data, setData] = useState({title: 'Розміщення та тимчасові прихистки', shelters: []});

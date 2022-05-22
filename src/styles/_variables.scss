@@ -1,4 +1,6 @@
 $light: #fff;
+$light-1: $light;
+$light-2: #fbfbfb;
 
 $dark: #000;
 $dark-1: $dark;
@@ -6,6 +8,7 @@ $dark-2: #141414;
 $dark-3: #404040;
 $dark-4: #5B6B7B;
 $dark-5: #BEC3CC;
+$dark-6: #E8EAED;
 
 $secondary: #821811;
 
@@ -13,7 +16,7 @@ $icon-1: #ebf6fb;
 $icon-2: #fff8e8;
 
 $box-shadow: 10px 10px 50px rgba(0, 0, 0, 0.08);
-$bg-linear-gradient: linear-gradient(180deg, rgba(0, 0, 0, 0) 0, rgba(0, 0, 0, 0.5) 100%);
+$bg-linear-gradient: linear-gradient(180deg, rgba(0, 0, 0, 0.4) 0, rgba(0, 0, 0, 0.6) 100%);
 
 
 

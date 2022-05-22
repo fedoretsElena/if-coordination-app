@@ -3,25 +3,28 @@ import { Fragment, useEffect, useState } from 'react';
 import './Volunteers.scss';
 import Headline from './../../components/Headline/Headline';
 import AidCategoriesAccordion from './../../components/AidCategoriesAccordion/AidCategoriesAccordion';
-import { API_PATH } from './../../api-config';
+import { API_PATH } from './../../configs/api.config';
 
 const Volunteers = () => {
   const [aidCategories, setAidCategories] = useState({});
   const [headline, setHeadline] = useState({});
+  const headers = {
+    'Content-Type': 'application/json',
+    'Accept': 'application/json'
+  };
 
   useEffect(() => {
-    const headers = {
-      'Content-Type': 'application/json',
-      'Accept': 'application/json'
+    const fetchData = async () => {
+      const headline = await fetch(`${API_PATH}volunteers/about.json`, { headers })
+        .then(response => response.json());
+      const aidCategories = await fetch(`${API_PATH}volunteers/aidCategories.json`, { headers })
+        .then(response => response.json());
+
+      setHeadline(headline);
+      setAidCategories(aidCategories);
     };
 
-    Promise.allSettled([
-      fetch(`${API_PATH}volunteers/about.json`, { headers }).then(response => response.json()),
-      fetch(`${API_PATH}volunteers/aidCategories.json`, { headers }).then(response => response.json()),
-    ]).then(res => {
-      const results = res.map(({value}) => value);
-      [setHeadline, setAidCategories].forEach((func, index) => func(results[index]));
-    });
+    fetchData();
   }, [])
 
   return <Fragment>

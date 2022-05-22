@@ -1,0 +1,48 @@
+@use "sass:map";
+
+@import './../../../styles/variables';
+@import './../../../styles/typography';
+
+.top-nav {
+  max-height: calc(100vh - 60px);
+  overflow: auto;
+
+  &__item {
+    color: $dark-1;
+    padding: .9rem 1.5rem;
+    cursor: pointer;
+    font: map.get($custom-typography-config, 'header-3');
+    line-height: 1.5rem;
+
+    &[aria-expanded="true"] {
+      color: $secondary;
+
+      svg {
+        transform: rotate(180deg);
+      }
+    }
+  }
+
+  &__subitem {
+    padding: 1rem 0;
+    cursor: pointer;
+  }
+
+  &__sublist {
+    margin-left: 2.5rem;
+
+    &-container {
+      background: $light-2;
+    }
+  }
+
+  svg {
+    font-size: 1.5rem;
+    color: $dark-4;
+    min-width: 1.5rem;
+  }
+
+  &__main {
+    border-bottom: 1px solid $dark-6;
+  }
+}

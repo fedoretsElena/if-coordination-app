@@ -4,7 +4,7 @@ import './Home.scss';
 import AidCategories from './AidCategories/AidCategories';
 import OfficialSources from './OfficialSources/OfficialSources';
 import Headline from './../../components/Headline/Headline';
-import { API_PATH } from './../../api-config';
+import { API_PATH } from './../../configs/api.config';
 
 const Home = () => {
    const [aidCategories, setAidCategories] = useState({});
@@ -28,11 +28,11 @@ const Home = () => {
    }, [])
 
    return <Fragment>
-      <Headline
+     {headline && <Headline
         title={headline.title}
         text={headline.text}
         backgroundImgURL={headline.backgroundImgURL}
-     />
+     />}
       <AidCategories title={aidCategories.title} list={aidCategories.list} />
       <OfficialSources title={officialSources.title} list={officialSources.list} />
    </ Fragment>

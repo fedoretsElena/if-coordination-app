@@ -1,0 +1,32 @@
+@import './../../../styles/variables';
+
+.hamburger {
+  cursor: pointer;
+}
+
+.hamburger div {
+  position: relative;
+  width: 18px;
+  height: 2px;
+  background-color: $dark-4;
+  margin-top: 4px;
+  transition: all 0.3s ease-in-out;
+}
+
+.hamburger.open {
+  .top-bun {
+    transform: rotate(-45deg);
+    margin-top: 5px;
+  }
+
+  .bottom-bun {
+    opacity: 0;
+    transform: rotate(45deg);
+  }
+
+  .meat {
+    transform: rotate(45deg);
+    margin-top: -2px;
+  }
+}
+

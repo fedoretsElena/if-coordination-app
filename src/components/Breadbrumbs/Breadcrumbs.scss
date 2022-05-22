@@ -1,3 +1,25 @@
-.breadcrumbs {
+@use "sass:map";
+
+@import './../../styles/typography';
+@import './../../styles/variables';
+
+.breadcrumbs:not(:empty) {
   height: 48px;
+  display: flex;
+  padding: 1rem 1.5rem;
+  align-items: center;
+  background: $light;
+}
+
+.breadcrumb {
+  font: map.get($custom-typography-config, 'breadcrumb');
+
+  a {
+    color: $secondary;
+  }
+
+  &__icon {
+    font-size: 20px;
+    color: $secondary;
+  }
 }

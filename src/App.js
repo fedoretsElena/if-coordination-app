@@ -3,8 +3,9 @@ import { useEffect, useState } from 'react';
 
 import './App.scss';
 import { Header, Breadcrumbs, Footer } from './components';
-import { Business, Home, Resettlers, Volunteers, CityLeisure, Accommodation } from './pages';
-import { API_PATH } from './api-config';
+import ScrollToTop from './utils/ScrollToTop';
+import { API_PATH } from './configs/api.config';
+import { buildPaths, routes } from './configs/routes.config';
 
 function App() {
   const [links, setLinks] = useState({});
@@ -16,30 +17,31 @@ function App() {
       'Accept': 'application/json'
     };
 
-    fetch(`${API_PATH}/links.json`, { headers })
+    fetch(`${API_PATH}links.json`, { headers })
       .then(response => response.json())
       .then(setLinks);
 
-    fetch(`${API_PATH}/contacts.json`, { headers })
+    fetch(`${API_PATH}contacts.json`, { headers })
       .then(response => response.json())
       .then(setContacts);
   }, [])
 
+  const flattenRoutes = routes =>
+    routes
+      .map(route => [route.routes ? flattenRoutes(route.routes) : [], route])
+      .flat(Infinity);
+
   return (
     <div className="container">
-      <Header />
-      {/*<Breadcrumbs  />*/}
-
-      <Routes>
-        <Route path="/" exact element={<Home />}/>
-        <Route path="/resettlers" exact element={<Resettlers />}/>
-        <Route path="/resettlers/accommodation" exact element={<Accommodation />}/>
-        <Route path="/business" exact element={<Business />}/>
-        <Route path="/volunteers" exact element={<Volunteers />}/>
-        <Route path="/city-leisure" exact element={<CityLeisure />}/>
-
-        {/*<Route path="*" component={NotFound} />*/}
-      </Routes>
+      <Header links={links} />
+      <Breadcrumbs />
+      <ScrollToTop>
+        <Routes>
+          {flattenRoutes(buildPaths(routes)).map(route => (
+            <Route path={route.path} exact={route.exact} element={route.component} />
+          ))}
+        </Routes>
+      </ScrollToTop>
 
       <Footer contacts={contacts} links={links.nav} socialNetworks={links.socialNetworks} />
     </div>

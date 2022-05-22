@@ -3,7 +3,8 @@ import { Fragment, useEffect, useState } from 'react';
 import './Resettlers.scss';
 import Headline from './../../components/Headline/Headline';
 import AidCategoriesAccordion from './../../components/AidCategoriesAccordion/AidCategoriesAccordion';
-import { API_PATH } from './../../api-config';
+import { API_PATH } from './../../configs/api.config';
+import { Breadcrumbs } from './../../components';
 
 const Resettlers = () => {
   const [aidCategories, setAidCategories] = useState({});
