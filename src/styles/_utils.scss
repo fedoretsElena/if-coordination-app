@@ -1,3 +1,17 @@
+@import 'variables';
+
 .text-uppercase {
   text-transform: uppercase;
+}
+
+.container-lg, .container-md {
+  width: 90%;
+}
+
+.container-lg {
+  max-width: $container-lg;
+}
+
+.container-md {
+  max-width: $container-md;
 }

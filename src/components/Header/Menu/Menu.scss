@@ -1,0 +1,22 @@
+@import './../../../styles/variables';
+@import './../../../styles/breakpoints';
+
+.navigation {
+  display: flex;
+  gap: 0 1rem;
+  color: $dark;
+
+  &__item {
+    padding: 1rem .5rem;
+    border-bottom: 1px solid transparent;
+
+    &.active, &:hover {
+      color: $secondary;
+      border-bottom-color: $secondary;
+    }
+
+    &.active {
+      font-weight: 700;
+    }
+  }
+}

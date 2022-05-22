@@ -1,4 +1,5 @@
 @import './../../../styles/variables';
+@import './../../../styles/breakpoints';
 
 .nav {
   &-link {
@@ -13,5 +14,22 @@
     display: grid;
     grid-gap: 0 2rem;
     grid-template-columns: 1fr 1fr;
+  }
+}
+
+.social-media {
+  margin: 0 auto;
+}
+
+@media screen and (min-width: $desktop) {
+  .nav-grid {
+    display: grid;
+    grid-gap: 2rem;
+    grid-template-columns: 1.5fr 1fr;
+    align-items: flex-start;
+  }
+
+  .social-media {
+    margin: .5rem 0 0 auto;
   }
 }

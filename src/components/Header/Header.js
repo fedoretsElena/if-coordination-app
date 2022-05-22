@@ -4,12 +4,12 @@ import PropTypes from 'prop-types';
 import { disableBodyScroll, enableBodyScroll } from 'body-scroll-lock';
 
 import logo from './../../assets/logo.svg';
-import Burger from './Burger/Burger';
+import MobileMenu from './MobileMenu/MobileMenu';
+import Menu from './Menu/Menu';
 import './Header.scss';
-import Nav from './Nav/Nav';
 
 const Header = ({links}) => {
-  const [isMenuOpen, toggleMenu] = useState(false);
+  const [isMobileMenuOpen, toggleMenu] = useState(false);
 
   const handleBurgerClick = (state) => {
     toggleMenu(state);
@@ -17,23 +17,19 @@ const Header = ({links}) => {
   }
 
   return (
-    <header className="header px-3 py-2">
+    <header className="header px-3">
       <div className="d-flex justify-content-between align-items-center">
         <Link className="header__logo" to="./">
           <img src={logo} className="if-logo" alt="if-logo"/>
         </Link>
 
-        <Burger handleClick={handleBurgerClick} />
+        <Menu links={links?.nav}/>
 
-        {isMenuOpen && <div className="backdrop"></div>}
-
-        <div className={'header__menu menu ' + (isMenuOpen ? 'menu--open' : '')}>
-          <div className="menu__header d-flex justify-content-end align-items-center px-4">
-            <Burger state={isMenuOpen} handleClick={handleBurgerClick}/>
-          </div>
-
-          <Nav nav={links?.extendedNav}/>
-        </div>
+        <MobileMenu
+          isMobileMenuOpen={isMobileMenuOpen}
+          handleBurgerClick={handleBurgerClick}
+          links={links?.extendedNav}
+        />
       </div>
     </header>
   );

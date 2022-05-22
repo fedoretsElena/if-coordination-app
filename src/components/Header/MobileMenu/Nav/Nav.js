@@ -12,7 +12,6 @@ import { MdKeyboardArrowDown } from 'react-icons/md';
 import './Nav.scss';
 
 const Nav = ({nav}) => {
-  console.log(nav)
   return (
     <nav className="top-nav">
 

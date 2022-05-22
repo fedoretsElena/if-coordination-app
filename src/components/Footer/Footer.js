@@ -5,19 +5,26 @@ import './Footer.scss';
 import BackButton from './../BackButton/BackButton';
 import Nav from './Nav/Nav';
 import Contacts from './Contacts/Contacts';
-import SocialNetworks from './SocialNetworks/SocialNetworks';
 
-const Footer = ({contacts, links, socialNetworks = {}}) => (
-  <footer className="footer px-3 py-4">
-    <BackButton />
-    <Contacts places={contacts.places} phones={contacts.phones}/>
-    <Nav links={links} />
+const Footer = ({contacts, links}) => {
+  return (
+    <footer className="footer py-4">
+      <div className="footer__container m-auto">
+        <BackButton />
+        <Contacts places={contacts.places} phones={contacts.phones}/>
 
-    {!!Object.keys(socialNetworks).length && <SocialNetworks networks={socialNetworks}/>}
+        <div className="footer__navigation">
+          <Nav links={links} />
+        </div>
 
-    <div className="copyright-text caption d-flex align-items-center mt-3"><MdCopyright className="mr-2" /> Copyright 2022</div>
-  </footer>
-);
+        <div className="copyright-text caption d-flex align-items-center mt-3">
+          <MdCopyright className="mr-2" />
+          Copyright 2022
+        </div>
+      </div>
+    </footer>
+  );
+}
 
 Footer.propTypes = {
   contacts: PropTypes.shape({
@@ -27,11 +34,11 @@ Footer.propTypes = {
       address: PropTypes.string
     })),
   }),
-  links: PropTypes.arrayOf(PropTypes.shape({
-    name: PropTypes.string,
-    value: PropTypes.string,
-  })),
-  socialNetworks: PropTypes.object
+  links: PropTypes.shape({
+    socialNetworks: PropTypes.object,
+    nav: PropTypes.array,
+    additionalNav: PropTypes.array,
+  }),
 }
 
 export default Footer;

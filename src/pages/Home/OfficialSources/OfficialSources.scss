@@ -1,8 +1,14 @@
 @import './../../../styles/variables';
+@import './../../../styles/breakpoints';
 @import './../../../styles/spacing';
 
 .official-sources {
   padding: map-get($spacers, 4) map-get($spacers, 3);
+
+  &-grid {
+    display: grid;
+    grid-gap: 1.5rem 0;
+  }
 }
 
 .source-item {
@@ -27,8 +33,12 @@
     left: -20px;
   }
 
+  &__arrow {
+    display: none;
+  }
+
   &__text {
-    margin-left: 96px;
+    margin-left: 62px;
   }
 
   &:nth-child(odd) {
@@ -41,5 +51,36 @@
     .source-item__icon-container {
       background: $icon-2;
     }
+  }
+
+  @media screen and (min-width: $mobile) {
+    & {
+      gap: 1rem;
+      justify-content: space-between;
+
+      &:hover, &:hover &__arrow {
+        color: $dark-4;
+      }
+    }
+
+    &__arrow {
+      display: block;
+      color: $dark-2;
+      font-size: 2rem;
+      min-width: 2rem;
+    }
+  }
+}
+
+@media screen and (min-width: $tablet) {
+  .official-sources-grid {
+    grid-gap: 2rem 1rem;
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media screen and (min-width: $desktop) {
+  .official-sources-grid {
+    grid-template-columns: repeat(3, 1fr);
   }
 }

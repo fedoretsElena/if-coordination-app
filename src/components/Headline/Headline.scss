@@ -1,8 +1,13 @@
+@use "sass:map";
+
 @import './../../styles/variables';
+@import './../../styles/breakpoints';
+@import './../../styles/typography';
 
 .headline {
   color: $light;
   min-height: 50vh;
+  padding: 1rem 0;
   position: relative;
   background-position: center;
   background-repeat: no-repeat;
@@ -25,7 +30,26 @@
     position: relative;
   }
 
-  &__title.sm {
-    font-size: 40px;
+  &__title {
+    margin-bottom: 1rem;
+
+    &.sm {
+      font-size: 40px;
+    }
+  }
+
+  @media screen and (min-width: $desktop) {
+    &__content {
+      max-width: 80%;
+    }
+
+    &__text {
+      font: map.get($custom-typography-config, 'header-3');
+    }
+
+    &__title {
+      margin-bottom: 1.5rem;
+    }
   }
 }
+

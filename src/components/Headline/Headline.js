@@ -2,14 +2,16 @@ import PropTypes from 'prop-types';
 
 import './Headline.scss';
 
-const Headline = ({title, text, backgroundImgURL, size = 'lg'}) => (
+const Headline = ({title, text, backgroundImgURL, size = 'lg', containerSize = 'md'}) => (
   <section
-    className="headline p-4 d-flex flex-column justify-content-center"
+    className="headline d-flex flex-column justify-content-center"
     style={{ backgroundImage: `url(${backgroundImgURL})` }}
   >
-    <div className="headline__content">
-      <h1 className={'headline__title mb-3 ' + size}>{title}</h1>
-      <p>{text}</p>
+    <div className={'container-' + containerSize + ' m-auto'}>
+      <div className="headline__content">
+        <h1 className={'headline__title ' + size}>{title}</h1>
+        <p className="headline__text">{text}</p>
+      </div>
     </div>
   </section>
 );

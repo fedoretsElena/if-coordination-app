@@ -32,9 +32,10 @@ function App() {
       .flat(Infinity);
 
   return (
-    <div className="container">
+    <div className="app">
+      <a href="#aidCategories">test</a>
       <Header links={links} />
-      <Breadcrumbs />
+      {/*<Breadcrumbs />*/}
       <ScrollToTop>
         <Routes>
           {flattenRoutes(buildPaths(routes)).map(route => (
@@ -43,7 +44,7 @@ function App() {
         </Routes>
       </ScrollToTop>
 
-      <Footer contacts={contacts} links={links.nav} socialNetworks={links.socialNetworks} />
+      <Footer contacts={contacts} links={links} />
     </div>
   );
 }

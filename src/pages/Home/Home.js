@@ -31,6 +31,7 @@ const Home = () => {
      {headline && <Headline
         title={headline.title}
         text={headline.text}
+        containerSize="lg"
         backgroundImgURL={headline.backgroundImgURL}
      />}
       <AidCategories title={aidCategories.title} list={aidCategories.list} />

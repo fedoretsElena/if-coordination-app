@@ -4,20 +4,24 @@
     "value": "/"
   }, {
     "name": "Вимушено переселеним особам",
+    "shortName": "Переселенцям",
     "value": "/resettlers"
   }, {
     "name": "Волонтерам",
     "value": "/volunteers"
   }, {
     "name": "Мешканцям і гостям міста",
+    "shortName": "Цікаве у місті",
     "value": "/city-leisure"
   }, {
     "name": "Власникам бізнесу",
+    "shortName": "Бізнесу",
     "value": "/business"
   }, {
     "name": "Офіційні джерела",
-    "value": "/"
-  }, {
+    "value": "/#aidCategories"
+  }],
+  "additionalNav": [{
     "name": "Про нас",
     "value": "/"
   }, {

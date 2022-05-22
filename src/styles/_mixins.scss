@@ -51,3 +51,11 @@
   // Add the base font family to the config.
   @return map.merge($config, (font-family: $font-family));
 }
+
+@mixin line-clamp($count: 2) {
+  overflow: hidden;
+  display: -webkit-box;
+  white-space: normal;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: $count;
+}

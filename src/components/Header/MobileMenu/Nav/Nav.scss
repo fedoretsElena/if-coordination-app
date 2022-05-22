@@ -1,7 +1,7 @@
 @use "sass:map";
 
-@import './../../../styles/variables';
-@import './../../../styles/typography';
+@import '../../../../styles/variables';
+@import '../../../../styles/typography';
 
 .top-nav {
   max-height: calc(100vh - 60px);
