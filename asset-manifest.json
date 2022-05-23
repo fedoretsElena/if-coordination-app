@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/if-coordination-app/static/css/main.6b7c8115.css",
+    "main.css": "/if-coordination-app/static/css/main.03912b27.css",
     "main.js": "/if-coordination-app/static/js/main.964dc07f.js",
     "static/js/787.4ce9d71c.chunk.js": "/if-coordination-app/static/js/787.4ce9d71c.chunk.js",
     "static/media/logo-lg.svg": "/if-coordination-app/static/media/logo-lg.2c0a2252ef24b4fcd01506f977e3a932.svg",
@@ -16,12 +16,12 @@
     "static/media/news.svg": "/if-coordination-app/static/media/news.022935b7bc403ed9f59f.svg",
     "static/media/archive.svg": "/if-coordination-app/static/media/archive.4a9b70e8d574855a118f.svg",
     "index.html": "/if-coordination-app/index.html",
-    "main.6b7c8115.css.map": "/if-coordination-app/static/css/main.6b7c8115.css.map",
+    "main.03912b27.css.map": "/if-coordination-app/static/css/main.03912b27.css.map",
     "main.964dc07f.js.map": "/if-coordination-app/static/js/main.964dc07f.js.map",
     "787.4ce9d71c.chunk.js.map": "/if-coordination-app/static/js/787.4ce9d71c.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.6b7c8115.css",
+    "static/css/main.03912b27.css",
     "static/js/main.964dc07f.js"
   ]
 }
