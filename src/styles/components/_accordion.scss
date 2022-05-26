@@ -1,5 +1,4 @@
 @use "sass:map";
-
 @import 'src/styles/typography';
 @import 'src/styles/spacing';
 
@@ -26,5 +25,23 @@
     pre {
       white-space: pre-line;
     }
+  }
+}
+
+.accordion__panel {
+  animation: fadein 0.35s ease-in;
+}
+
+/* -------------------------------------------------- */
+/* ---------------- Animation part ------------------ */
+/* -------------------------------------------------- */
+
+@keyframes fadein {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
   }
 }

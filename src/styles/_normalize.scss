@@ -7,6 +7,13 @@ a {
   color: inherit;
 }
 
+a, button {
+  &:focus {
+    outline: none;
+    box-shadow: none;
+  }
+}
+
 ul {
   margin: 0;
   padding: 0;

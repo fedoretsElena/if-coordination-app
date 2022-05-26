@@ -4,6 +4,7 @@ import './CityLeisure.scss';
 import Headline from './../../components/Headline/Headline';
 import AidCategoriesAccordion from './../../components/AidCategoriesAccordion/AidCategoriesAccordion';
 import { API_PATH } from './../../configs/api.config';
+import Breadcrumbs  from './../../components/Breadbrumbs/Breadcrumbs';
 
 const CityLeisure = () => {
   const [aidCategories, setAidCategories] = useState({});
@@ -30,6 +31,8 @@ const CityLeisure = () => {
       text={headline.text}
       backgroundImgURL={headline.backgroundImgURL}
     />
+
+    <Breadcrumbs fullPath="/city-leisure"/>
 
     <AidCategoriesAccordion title={aidCategories.title} list={aidCategories.list} />
   </ Fragment>

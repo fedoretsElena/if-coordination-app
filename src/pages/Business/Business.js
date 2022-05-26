@@ -4,6 +4,7 @@ import './Business.scss';
 import Headline from './../../components/Headline/Headline';
 import AidCategoriesAccordion from './../../components/AidCategoriesAccordion/AidCategoriesAccordion';
 import { API_PATH } from './../../configs/api.config';
+import Breadcrumbs  from './../../components/Breadbrumbs/Breadcrumbs';
 
 const Business = () => {
   const [aidCategories, setAidCategories] = useState({});
@@ -30,6 +31,8 @@ const Business = () => {
       text={headline.text}
       backgroundImgURL={headline.backgroundImgURL}
     />
+
+    <Breadcrumbs fullPath="/business"/>
 
     <AidCategoriesAccordion title={aidCategories.title} list={aidCategories.list} />
   </ Fragment>

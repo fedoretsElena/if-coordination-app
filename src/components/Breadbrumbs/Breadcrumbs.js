@@ -6,16 +6,19 @@ import { routes } from './../../configs/routes.config';
 import {MdKeyboardArrowRight} from 'react-icons/md';
 import './Breadcrumbs.scss';
 
-function findRoute(query, currentRoute, acc) {
+function findRoute(fullPath, currentRoute, acc) {
+  if (!fullPath.includes(currentRoute.path)) {
+    return;
+  }
+
   acc.push(currentRoute);
-  if (query === currentRoute.path) {
+
+  if (fullPath === currentRoute.path) {
     return acc;
   }
 
-  if (query !== currentRoute.path && currentRoute.routes) {
-    return checkRouteList(currentRoute.routes, query, acc);
-  } else {
-    return null;
+  if (currentRoute.routes) {
+    return checkRouteList(currentRoute.routes, fullPath, acc);
   }
 }
 
@@ -32,13 +35,12 @@ const checkRouteList = (list, query, acc) => {
   return acc;
 }
 
-const Breadcrumbs = () => {
-  const {pathname} = useLocation();
-  const activeRoutes = checkRouteList(routes, pathname, []);
+const Breadcrumbs = ({theme = 'light', fullPath}) => {
+  const activeRoutes = checkRouteList(routes, fullPath, []);
 
   return (
     <div className="container-md m-auto">
-      <div className="breadcrumbs">
+      <div className={'breadcrumbs ' + theme }>
         {activeRoutes?.length > 1 && activeRoutes.map((crumb, index) => (
           <div key={index} className="breadcrumb d-flex align-items-center">
               {index < activeRoutes.length - 1 && (

@@ -4,6 +4,14 @@
 .header {
   border-bottom: 1px solid $dark-6;
 
+  .mobile-navigation {
+    padding: 20.5px 0;
+  }
+
+  .if-logo--sm {
+    max-width: 48px;
+  }
+
   @media screen and (min-width: $desktop) {
     & {
       border-bottom: none;
@@ -12,5 +20,25 @@
     .mobile-navigation {
       display: none;
     }
+
+    .navigation {
+      display: flex;
+    }
   }
+
+  @media screen and (min-width: $mobile) {
+    .if-logo {
+      &--sm {
+        display: none;
+      }
+
+      &--lg {
+        display: block;
+      }
+    }
+  }
+}
+
+.navigation, .if-logo--lg {
+  display: none;
 }

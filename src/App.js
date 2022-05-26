@@ -33,16 +33,16 @@ function App() {
 
   return (
     <div className="app">
-      <a href="#aidCategories">test</a>
       <Header links={links} />
-      {/*<Breadcrumbs />*/}
-      <ScrollToTop>
-        <Routes>
-          {flattenRoutes(buildPaths(routes)).map(route => (
-            <Route path={route.path} exact={route.exact} element={route.component} />
-          ))}
-        </Routes>
-      </ScrollToTop>
+      <main>
+        <ScrollToTop>
+          <Routes>
+            {flattenRoutes(buildPaths(routes)).map(route => (
+              <Route path={route.path} exact={route.exact} element={route.component} />
+            ))}
+          </Routes>
+        </ScrollToTop>
+      </main>
 
       <Footer contacts={contacts} links={links} />
     </div>

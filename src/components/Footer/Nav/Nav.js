@@ -5,7 +5,7 @@ import './Nav.scss';
 import SocialNetworks from './../SocialNetworks/SocialNetworks';
 
 const Nav = ({links}) => {
-  const {nav, socialNetworks, additionalNav} = links || {};
+  const {nav, socialNetworks = {}, additionalNav} = links || {};
   return (
     <section className="mt-3 pt-2">
       <h2>Навігація</h2>
@@ -16,7 +16,7 @@ const Nav = ({links}) => {
             <li>
               <ul>
                 {nav?.map(({value, name}, key) =>
-                  <li className="nav-item mb-2" key={key}>
+                  <li className="nav-item mb-2" key={name + '_' + key}>
                     <Link className="nav-link caption" to={value} target='_blank'>{name}</Link>
                   </li>
                 )}
@@ -25,7 +25,7 @@ const Nav = ({links}) => {
             <li>
               <ul>
                 {additionalNav?.map(({value, name}, key) =>
-                  <li className="nav-item mb-2" key={key}>
+                  <li className="nav-item mb-2" key={name + '_' + key}>
                     <Link className="nav-link caption" to={value} target='_blank'>{name}</Link>
                   </li>
                 )}

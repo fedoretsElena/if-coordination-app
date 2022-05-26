@@ -4,7 +4,7 @@ import './Resettlers.scss';
 import Headline from './../../components/Headline/Headline';
 import AidCategoriesAccordion from './../../components/AidCategoriesAccordion/AidCategoriesAccordion';
 import { API_PATH } from './../../configs/api.config';
-import { Breadcrumbs } from './../../components';
+import Breadcrumbs  from './../../components/Breadbrumbs/Breadcrumbs';
 
 const Resettlers = () => {
   const [aidCategories, setAidCategories] = useState({});
@@ -32,6 +32,8 @@ const Resettlers = () => {
       text={headline.text}
       backgroundImgURL={headline.backgroundImgURL}
     />
+
+    <Breadcrumbs fullPath="/resettlers"/>
 
     <AidCategoriesAccordion title={aidCategories.title} list={aidCategories.list} />
   </ Fragment>

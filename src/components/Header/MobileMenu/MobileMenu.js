@@ -1,15 +1,22 @@
-import { Fragment } from 'react';
 import PropTypes from 'prop-types';
+import { MdSearch } from "react-icons/md";
+import { Link } from "react-router-dom";
 
 import Burger from './../Burger/Burger';
 import Nav from './Nav/Nav';
 import './MobileMenu.scss';
 
-const MobileMenu = ({isMobileMenuOpen, handleBurgerClick, links}) => {
+const MobileMenu = ({isMobileMenuOpen, handleBurgerClick, links, closeMenu}) => {
 
   return (
     <div className="mobile-navigation">
-      <Burger handleClick={handleBurgerClick} />
+      <div className="d-flex align-items-center">
+        <Link className="mr-3" to='/search'>
+          <MdSearch className="icon-size mobile-navigation__search"/>
+        </Link>
+
+        <Burger handleClick={handleBurgerClick} />
+      </div>
 
       {isMobileMenuOpen && <div className="backdrop"></div>}
 
@@ -18,7 +25,7 @@ const MobileMenu = ({isMobileMenuOpen, handleBurgerClick, links}) => {
           <Burger state={isMobileMenuOpen} handleClick={handleBurgerClick}/>
         </div>
 
-        <Nav nav={links}/>
+        <Nav nav={links} closeMenu={closeMenu}/>
       </div>
     </div>
   );
@@ -32,6 +39,7 @@ MobileMenu.propTypes = {
     value: PropTypes.string,
     sublinks: PropTypes.array,
   })),
+  closeMenu: PropTypes.func
 };
 
 export default MobileMenu;

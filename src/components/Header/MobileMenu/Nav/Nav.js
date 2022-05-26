@@ -11,14 +11,14 @@ import { MdKeyboardArrowDown } from 'react-icons/md';
 
 import './Nav.scss';
 
-const Nav = ({nav}) => {
+const Nav = ({nav, closeMenu}) => {
   return (
     <nav className="top-nav">
 
       <Accordion className="top-nav__main my-3" allowZeroExpanded={true}>
         {nav?.map((item) => {
           return <Fragment>
-            {!item.sublinks && <Link className="d-block top-nav__item" to={item.value}>{item.name}</Link>}
+            {!item.sublinks && <Link className="d-block top-nav__item" to={item.value} onClick={closeMenu}>{item.name}</Link>}
             {item.sublinks &&
               <AccordionItem>
                 <AccordionItemHeading>
@@ -30,7 +30,7 @@ const Nav = ({nav}) => {
                 <AccordionItemPanel className="top-nav__sublist-container">
                   <ul className="top-nav__sublist">
                     {item.sublinks?.map((item, index) => <li className={"top-nav__subitem"} key={item.name + '_' + index}>
-                        <Link to={item.value}>
+                        <Link to={item.value} onClick={closeMenu}>
                           {item.name}
                         </Link>
                       </li>

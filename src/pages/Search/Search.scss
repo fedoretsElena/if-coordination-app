@@ -1,0 +1,94 @@
+@use "sass:map";
+
+@import "../../styles/variables";
+@import './../../styles/typography';
+@import './../../styles/breakpoints';
+
+.search-header {
+  padding: 1rem;
+  position: relative;
+  border-bottom: 1px solid $dark-6;
+
+  &__icon-back {
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 2rem;
+    color: $dark-4;
+    position: absolute;
+  }
+
+  @media screen and (min-width: $desktop) {
+    display: none;
+  }
+}
+
+.search-input {
+  display: flex;
+  align-items: center;
+  border: 1px solid $dark-4;
+  border-radius: 4px;
+  padding: 6px 12px;
+
+  &__el {
+    width: 100%;
+    border: none;
+    outline: none;
+    color: $dark;
+    font: map.get($custom-typography-config, 'body-1');
+
+    &::placeholder {
+      color: $dark-4;
+    }
+  }
+
+  &__icon {
+    font-size: 1.6rem;
+    color: $dark-4;
+    min-width: 23px;
+
+    &:hover {
+      color: $dark-5;
+    }
+  }
+
+  &__cancel-icon {
+    justify-self: flex-end;
+    cursor: pointer;
+  }
+}
+
+.search-results {
+  &__title {
+    padding: 12px 0;
+    border-bottom: 1px solid $dark;
+  }
+}
+
+.search-results-item {
+  display: block;
+  box-shadow: $box-shadow;
+  padding: 12px 20px;
+}
+
+.search-no-results {
+  text-align: center;
+
+  &__icon-circle {
+    width: 72px;
+    height: 72px;
+    border-radius: 50%;
+    border: 2px solid $dark-4;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &__icon {
+    font-size: 2rem;
+    color: $dark-4;
+  }
+
+  &__text {
+    font-size: 1.25rem;
+  }
+}

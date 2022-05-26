@@ -3,12 +3,21 @@
 
 .navigation {
   display: flex;
+  align-items: center;
   gap: 0 1rem;
   color: $dark;
 
+  &__search-item {
+    font-size: 1.5rem;
+  }
+
   &__item {
-    padding: 1rem .5rem;
+    padding: 1rem 0;
     border-bottom: 1px solid transparent;
+    
+    @media screen and (min-width: 1200px) {
+      padding: 1rem .5rem;
+    }
 
     &.active, &:hover {
       color: $secondary;

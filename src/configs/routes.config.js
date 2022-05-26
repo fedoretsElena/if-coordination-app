@@ -1,4 +1,4 @@
-import { Resettlers, Home, Accommodation, Business, CityLeisure, Volunteers } from '../pages';
+import { Resettlers, Home, Accommodation, Business, CityLeisure, Volunteers, Search } from '../pages';
 
 export const combinePaths = (parent, child) =>
   `${parent.replace(/\/$/, "")}/${child.replace(/^\//, "")}`;
@@ -50,6 +50,11 @@ export const routes = [
         exact: true,
         breadcrumbName: 'Цікаве у місті'
       },
+      {
+        path: '/search',
+        component: <Search />,
+        exact: true,
+      }
     ]
   },
 ];
