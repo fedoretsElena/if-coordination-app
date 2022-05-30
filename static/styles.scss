@@ -692,6 +692,11 @@ h1, h2, h3, h4, h5, p {
 .aid-categories-details {
   padding: 1.5rem;
 
+  &__accordion {
+    padding: 0.5rem 1rem 1.5rem 1rem;
+    box-shadow: var(--box-shadow);
+  }
+
   .details-button {
     min-width: 190px;
   }
@@ -701,6 +706,11 @@ h1, h2, h3, h4, h5, p {
   }
 
   .aid-category-detail {
+    &__button {
+      padding: 1rem 0;
+      border-bottom: 1px solid var(--dark-1);
+    }
+
     &__description {
       margin: 0;
       font-family: inherit;
@@ -709,6 +719,27 @@ h1, h2, h3, h4, h5, p {
     &__btn-more {
       display: block;
       margin: 1rem auto 0;
+    }
+  }
+
+  @media screen and (min-width: $desktop) {
+    &__accordion {
+      padding: 0;
+      box-shadow: none;
+    }
+
+    .aid-category-detail {
+      padding: 0 1rem;
+      box-shadow: var(--box-shadow);
+      margin-bottom: 1rem;
+
+      &__button {
+        padding: 1.5rem 0;
+      }
+
+      .accordion__item-input:not(:checked) ~ .aid-category-detail__button {
+        border-color: transparent;
+      }
     }
   }
 }
@@ -722,7 +753,6 @@ h1, h2, h3, h4, h5, p {
     padding: 1.5rem 0;
     line-height: 1.75rem;
     transition: all 0.25s ease-in-out;
-    border-bottom: 1px solid transparent;
   }
 
   .no-select, &__button {
@@ -753,9 +783,6 @@ h1, h2, h3, h4, h5, p {
 
   &__item {
     position: relative;
-    margin-bottom: 1rem;
-    box-shadow: var(--box-shadow);
-    padding: 0 1rem;
 
     &:nth-of-type(1) {
       animation-delay: 0.5s;
@@ -771,6 +798,10 @@ h1, h2, h3, h4, h5, p {
 
     &:last-of-type {
       padding-bottom: 0;
+    }
+
+    &:hover, .accordion__item-input:checked ~ .accordion__button {
+      color: var(--dark-1);
     }
   }
 
