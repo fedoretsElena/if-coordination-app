@@ -316,7 +316,7 @@ h1, h2, h3, h4, h5, p {
   background: rgba(var(--dark-1), .4);
 }
 
-/*------- Back Button -------*/
+/*------- Back To Top Button -------*/
 .back-button {
   z-index: 2;
   top: 10%;
@@ -478,7 +478,51 @@ h1, h2, h3, h4, h5, p {
   }
 }
 
+/*------- Breadcrumbs -------*/
 
+.breadcrumbs:not(:empty) {
+  height: 48px;
+  display: flex;
+  padding: 1rem 0;
+  align-items: center;
+  background: var(--light-1);
+
+  .breadcrumb {
+    display: flex;
+    align-items: center;
+    font: var(--breadcrumb);
+
+    a {
+      color: var(--secondary);
+    }
+
+    &__icon {
+      font-size: 15px;
+      margin: 0 1rem;
+      color: var(--secondary);
+    }
+  }
+
+  @media screen and (min-width: $desktop) {
+    &:not(.dark) {
+      top: 60px;
+      z-index: 3;
+      color: var(--light-1);
+      background: transparent;
+      position: absolute;
+
+      .breadcrumb {
+        a {
+          color: var(--dark-6);
+        }
+
+        &__icon {
+          color: var(--light-1);
+        }
+      }
+    }
+  }
+}
 
 /*------- Headline -------*/
 
