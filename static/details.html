@@ -42,12 +42,11 @@
         <h2 class="aid-categories-details__title">Категорії допомоги</h2>
 
         <ul class="aid-categories-details__accordion accordion">
-          <li class="accordion__item aid-category">
-            <input class="accordion__item-input" type="checkbox" checked>
-            <i></i>
-            <h3 class="accordion__button aid-category__title">Перелік ГО</h3>
+          <li class="accordion__item aid-category-detail">
+            <input class="accordion__item-input" type="radio" name="aid-categories-details-accordion-item">
+            <h3 class="accordion__button aid-category-detail__title">Перелік ГО</h3>
             <div class="accordion__content">
-              <pre class="aid-category__description">
+              <pre class="aid-category-detail__description">
                 Впродовж трьох діб усі переміщені особи повинні стати на облік та оформити відповідне посвідчення, яке спростить отримання пільг та матеріальних виплат.
                 Це можна зробити у ЦНАПах і соціальних їдальнях, які відкриті на базі чотирьох ліцеїв міста:
                 №5 (вулиця Івана Франка, 19),
@@ -62,12 +61,22 @@
               </pre>
 
               <a
-                class="aid-category__btn-more button"
+                class="aid-category-detail__btn-more button"
                 href=''
                 target="_blank"
               >
                 Детальніше
               </a>
+            </div>
+          </li>
+
+          <li class="accordion__item aid-category">
+            <input class="accordion__item-input" type="radio" name="aid-categories-details-accordion-item">
+            <h3 class="accordion__button aid-category__title">Соціальна допомога</h3>
+            <div class="accordion__content">
+              <pre class="aid-category__description">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid beatae consequatur consequuntur cupiditate debitis deserunt, facilis fugit harum maxime molestias nostrum omnis placeat, quis repellat tempore totam unde vel voluptatum?
+              </pre>
             </div>
           </li>
       </ul>
