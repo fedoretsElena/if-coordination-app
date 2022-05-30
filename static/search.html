@@ -19,68 +19,63 @@
         <img src='assets/logo-sm.png' class="header__logo--sm" alt="if-logo-sm"/>
         <img src='assets/logo-lg.svg' class="header__logo--lg" alt="if-logo-lg"/>
       </a>
-
-
     </div>
   </header>
 
   <main>
-    <section
-      class="headline"
-      style="background-image: url('https://i.pinimg.com/originals/45/32/57/453257259cd4487749bf99418baf94aa.jpg')"
-    >
-      <div class="headline__container container-lg">
-        <div class="headline__content">
-          <h1 class="headline__title">Переселенцям</h1>
-          <p class="headline__text">Державна реєстрація, соціальна допомога, працевлаштування, житло, харчування та психологічна допомога</p>
+    <div class="search">
+      <div class="search-header">
+        <a href='./'>
+          <i class="search-header__icon-back fa fa-arrow-left"></i>
+        </a>
+
+        <h3 class="search-header__title">Пошук</h3>
+      </div>
+
+      <form class="search-input container-md">
+        <i class="search-input__icon search-input__search-icon fa fa-search"></i>
+        <input
+          value=''
+          class="search-input__el"
+          placeholder="Почніть вводити..."
+        />
+
+        <button class="search-input__reset-btn" type="reset">
+          <i class="search-input__reset-btn-icon fa fa-circle-xmark"></i>
+        </button>
+      </form>
+
+      <div class="spinner-container">
+        <div class="loading-spinner">
         </div>
       </div>
-    </section>
 
-    <section class="aid-categories-details">
-      <div class="container-md">
-        <h2 class="aid-categories-details__title">Категорії допомоги</h2>
+      <section class="search-no-results container-md">
+          <div class="search-no-results__icon-circle">
+            <i class="search-no-results__icon fa fa-user"></i>
+          </div>
 
-        <ul class="aid-categories-details__accordion accordion">
-          <li class="accordion__item aid-category-detail">
-            <input class="accordion__item-input" type="radio" name="aid-categories-details-accordion-item" checked>
-            <h3 class="accordion__button aid-category-detail__title">Перелік ГО</h3>
-            <div class="accordion__content">
-              <pre class="aid-category-detail__description">
-                Впродовж трьох діб усі переміщені особи повинні стати на облік та оформити відповідне посвідчення, яке спростить отримання пільг та матеріальних виплат.
-                Це можна зробити у ЦНАПах і соціальних їдальнях, які відкриті на базі чотирьох ліцеїв міста:
-                №5 (вулиця Івана Франка, 19),
-                №9 (вулиця Гетьмана Мазепи, 169),
-                 №18 (вулиця Тролейбусна, 7),
-                №22 (вулиця Івана-Павла ІІ, 24).
-                Крім того, зареєструватися люди можуть і в інших точках міста: офіси для реєстрації працюють з 9 до 16 год. за адресами:
-                вул. Галицька, 124А (“Пасічна”);
-                вул. Гетьмана Мазепи,185 (“Бам”);
-                вул. Івана Павла ІІ, 4 (“Каскад”).
-                А також у ЦНАПах в селах громади.
-              </pre>
+          <div class="search-no-results__text px-2">
+            Введіть потрібні ключові слова та почніть пошук серед наших ресурсів
+        </div>
+      </section>
 
-              <a
-                class="aid-category-detail__btn-more button"
-                href=''
-                target="_blank"
-              >
-                Детальніше
-              </a>
-            </div>
+      <section class="search-results container-md">
+        <h3 class="search-results__title">Результати пошуку</h3>
+
+        <ul>
+          <li>
+            <a class="search-results-item" href=''>
+              <h4>Мапа Бомбосховищ</h4>
+            </a>
+            <a class="search-results-item" href=''>
+              <h4>Цікаве у місті</h4>
+              <span class="search-results-item__description">Бомбосховища, різні види курсів, можливості працевлаштування, туристичні аттракції.</span>
+            </a>
           </li>
-
-          <li class="accordion__item aid-category">
-            <input class="accordion__item-input" type="radio" name="aid-categories-details-accordion-item">
-            <h3 class="accordion__button aid-category__title">Соціальна допомога</h3>
-            <div class="accordion__content">
-              <pre class="aid-category__description">
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid beatae consequatur consequuntur cupiditate debitis deserunt, facilis fugit harum maxime molestias nostrum omnis placeat, quis repellat tempore totam unde vel voluptatum?
-              </pre>
-            </div>
-          </li>
-      </ul>
-    </section>
+        </ul>
+      </section>
+    </div>
   </main>
 
   <footer class="footer py-4">

@@ -653,3 +653,173 @@ h1, h2, h3, h4, h5, p {
     }
   }
 }
+
+/*------- Search  -------*/
+.search {
+  padding-bottom: 2rem;
+  margin-bottom: 2rem;
+
+  &-header {
+    display: flex;
+    padding: 1rem;
+    position: relative;
+    border-bottom: 1px solid var(--dark-6);
+
+    &__icon-back {
+      top: 50%;
+      transform: translateY(-50%);
+      font-size: 1.75rem;
+      color: var(--dark-4);
+      position: absolute;
+    }
+
+    &__title {
+      margin: 0 auto;
+    }
+
+    @media screen and (min-width: $desktop) {
+      display: none;
+    }
+  }
+
+  &-input {
+    display: flex;
+    gap: 0 .5rem;
+    align-items: center;
+
+    border: 1px solid var(--dark-4);
+    border-radius: 4px;
+
+    padding: 6px 12px;
+    margin: 1rem auto;
+
+    &__icon {
+      color: var(--dark-4);
+    }
+
+    &__search-icon {
+      font-size: 1rem;
+    }
+
+    &__reset-btn {
+      padding: 0;
+      border: 0;
+      background: transparent;
+
+      display: flex;
+      align-items: center;
+      justify-items: center;
+      justify-self: flex-end;
+
+      cursor: pointer;
+
+      &-icon {
+        font-size: 1.25rem;
+        color: var(--dark-4);
+
+        &:hover {
+          color: var(--dark-5);
+        }
+      }
+    }
+
+    &__el {
+      width: 100%;
+
+      border: none;
+      outline: none;
+
+      color: var(--dark-1);
+      font: var(--body-1);
+
+      text-overflow: ellipsis;
+
+      &::-webkit-search-cancel-button {
+        cursor: pointer;
+        height: 1em;
+        width: 1em;
+        border-radius: 50em;
+        background: url(https://pro.fontawesome.com/releases/v5.10.0/svgs/solid/times-circle.svg) no-repeat 50% 50%;
+        background-size: contain;
+      }
+
+      &::placeholder {
+        color: var(--dark-4);
+      }
+    }
+  }
+}
+
+.search-results {
+  margin: 1rem auto;
+
+  &__title {
+    padding: 12px 0;
+    border-bottom: 1px solid var(--dark-1);
+  }
+
+  &-item {
+    display: block;
+    box-shadow: var(--box-shadow);
+    padding: 12px 20px;
+    margin: 1rem 0;
+
+    &__description {
+      padding-top: .5rem;
+    }
+  }
+}
+
+.search-no-results {
+  text-align: center;
+
+  &__icon-circle {
+    width: 72px;
+    height: 72px;
+
+    border-radius: 50%;
+    border: 2px solid var(--dark-4);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    margin: 2rem auto 1.5rem;
+  }
+
+  &__icon {
+    font-size: 2rem;
+    color: var(--dark-4);
+  }
+
+  &__text {
+    font-size: 1.25rem;
+  }
+}
+
+/*------- Spinner  -------*/
+
+@keyframes spinner {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.spinner-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100px;
+}
+
+.loading-spinner {
+  width: 50px;
+  height: 50px;
+  border: 10px solid var(--dark-4);
+  border-top: 10px solid var(--dark-2);
+  border-radius: 50%;
+  animation: spinner 1.5s linear infinite;
+}
