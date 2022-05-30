@@ -20,6 +20,47 @@
           <img src='assets/logo-lg.svg' class="header__logo--lg" alt="if-logo-lg"/>
         </a>
 
+<!--        Desktop navigation -->
+        <nav class="navigation">
+          <a class="navigation__item active" href=''>Головна</a>
+          <a class="navigation__item" href='./details.html'>Переселенцям</a>
+          <a class="navigation__item" href='./details.html'>Волонтерам</a>
+          <a class="navigation__item" href='./details.html'>Цікаве у місті</a>
+          <a class="navigation__item" href='./details.html'>Бізнесу</a>
+          <a class="navigation__item" href='./#officialSources'>Офіційні джерела</a>
+
+          <a href='./search.html'>
+            <i class="fa fa-search"></i>
+          </a>
+        </nav>
+        
+<!--        Mobile navigation -->
+      <div class="mobile-navigation">
+        <div class="mobile-navigation__head">
+          <a class="mobile-navigation__search-link" href='/search.html'>
+            <i class="mobile-navigation__search fa fa-search"></i>
+          </a>
+
+          <div class="mobile-navigation__menu-control">
+            <input class="hamburger-state-holder" type="checkbox" id="hamburger-state-holder">
+            <label class='hamburger' for="hamburger-state-holder">
+              <div class="top-bun"></div>
+              <div class="meat"></div>
+              <div class="bottom-bun"></div>
+            </label>
+          </div>
+        </div>
+
+<!--        <div class="backdrop"></div>-->
+
+        <div class='menu'>
+          <div class="menu__header d-flex justify-content-end align-items-center px-4">
+<!--            <Burger state={isMobileMenuOpen} handleClick={handleBurgerClick}/>-->
+          </div>
+
+<!--        <Nav nav={links} closeMenu={closeMenu}/>-->
+        </div>
+      </div>
 
       </div>
     </header>
@@ -37,7 +78,7 @@
         </div>
       </section>
       
-      <section class="aid-categories" id="aidCategories">
+      <section class="aid-categories">
         <div class="container-lg">
           <h2 class="aid-categories__title">Категорії допомоги</h2>
 
@@ -93,7 +134,7 @@
         </div>
       </section>
 
-      <section class="official-sources">
+      <section class="official-sources" id="officialSources">
         <div class="official-sources__container container-lg">
           <h2 class="official-sources__title">Офіційні джерела</h2>
 

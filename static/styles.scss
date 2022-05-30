@@ -167,7 +167,155 @@ h1, h2, h3, h4, h5, p {
       }
     }
   }
+
+  @media screen and (min-width: $desktop) {
+    & {
+      border-bottom: none;
+    }
+
+    .mobile-navigation {
+      display: none;
+    }
+
+    .navigation {
+      display: flex;
+    }
+  }
 }
+
+/*------- Header desktop navigation -------*/
+.navigation, .if-logo--lg {
+  display: none;
+}
+
+@media screen and (min-width: $desktop)  {
+  .navigation {
+    display: flex;
+    align-items: center;
+    gap: 0 1rem;
+
+    color: var(--dark-1);
+
+    &__search-item {
+      font-size: 1.5rem;
+    }
+
+    &__item {
+      padding: 1rem 0;
+      border-bottom: 1px solid transparent;
+
+      @media screen and (min-width: 1200px) {
+        padding: 1rem .5rem;
+      }
+
+      &.active, &:hover {
+        color: var(--secondary);
+        border-bottom-color: var(--secondary);
+      }
+
+      &.active {
+        font-weight: 700;
+      }
+    }
+  }
+}
+
+/*------- Header mobile navigation -------*/
+.mobile-navigation {
+  &__head {
+    display: flex;
+    align-items: center;
+  }
+
+  &__search {
+    color: var(--dark-4);
+
+    &-link {
+      margin-right: 1rem;
+    }
+  }
+
+  &__menu-control {
+    position: relative;
+
+    .hamburger-state-holder {
+      display: block;
+      position: absolute;
+      margin: 0;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      opacity: 0;
+      z-index: 1;
+    }
+  }
+}
+
+/*------- Header hamburger -------*/
+.hamburger {
+  cursor: pointer;
+
+  div {
+    position: relative;
+    width: 18px;
+    height: 2px;
+    background-color: var(--dark-4);
+    margin-top: 4px;
+    transition: all 0.3s ease-in-out;
+  }
+
+  &.open {
+    .top-bun {
+      transform: rotate(-45deg);
+      margin-top: 5px;
+    }
+
+    .bottom-bun {
+      opacity: 0;
+      transform: rotate(45deg);
+    }
+
+    .meat {
+      transform: rotate(45deg);
+      margin-top: -2px;
+    }
+  }
+}
+
+.menu {
+  top: 0;
+  right: 0;
+  z-index: 5;
+  height: 100vh;
+  background: var(--light-1);
+  width: calc(100% - 1.5rem);
+  position: fixed;
+  transform: translateX(100%);
+  transition: .3s transform;
+  box-shadow: -8px -8px 16px 0px #00000014;
+
+  &--open {
+    transform: translateX(0);
+  }
+
+  &__header {
+    height: 60px;
+    border-bottom: 1px solid var(--dark-6);
+  }
+}
+
+.backdrop {
+  top: 0;
+  left: 0;
+  content: '';
+  width: 100%;
+  height: 100%;
+  z-index: 4;
+  position: absolute;
+  background: rgba(var(--dark-1), .4);
+}
+
 /*------- Back Button -------*/
 .back-button {
   z-index: 2;
