@@ -26,84 +26,65 @@
 
   <main>
     <div class="container-md">
-      <div class='breadcrumbs'>
+      <div class='breadcrumbs dark'>
         <div class="breadcrumb">
             <a href='./'>Головна</a>
             <i class="breadcrumb__icon fa fa-angle-right"></i>
         </div>
-        <div class="breadcrumb">Переселенцям</div>
+        <div class="breadcrumb">
+          <a href="./details.html">Переселенцям</a>
+          <i class="breadcrumb__icon fa fa-angle-right"></i>
+        </div>
+        <div class="breadcrumb">Розміщення</div>
       </div>
     </div>
     
-    <section
-      class="headline"
-      style="background-image: url('https://i.pinimg.com/originals/45/32/57/453257259cd4487749bf99418baf94aa.jpg')"
-    >
-      <div class="headline__container container-md">
-        <div class="headline__content">
-          <h1 class="headline__title">Переселенцям</h1>
-          <p class="headline__text">Державна реєстрація, соціальна допомога, працевлаштування, житло, харчування та психологічна допомога</p>
+    <section class="accommodation">
+      <div class="container-md">
+        <h2 class="accommodation__title">Розміщення та тимчасові прихистки</h2>
+
+        <div class="shelter">
+          <h3 class="shelter__name">Координаційний штаб по розміщенню переміщенних осіб</h3>
+          <hr/>
+          <pre>В Івано-Франківську створено Координаційний штаб по розміщенню тимчасово переміщених осіб на території області та гуманітарної допомоги.</pre>
+
+          <div class="shelter__details">
+            <i class="shelter__details-icon fa fa-phone"></i>
+            <div class="shelter__details-list">
+              <a class="link" href='tel: (095) 123 - 45 - 45'>(095) 123 - 45 - 45</a>
+              <a class="link" href='tel: (068) 123 - 45 - 45'>(068) 123 - 45 - 45</a>
+              <a class="link" href='tel: (342) 123 - 45 - 45'> (342) 123 - 45 - 45</a>
+          </div>
+        </div>
+
+        <div class="shelter__details">
+          <i class="shelter__details-icon fa fa-location-dot"></i>
+          <div class="shelter__details-list">
+            <span>вул. Грушевського, 18</span>
+          </div>
         </div>
       </div>
-    </section>
 
-    <section class="aid-categories-details">
-      <div class="container-md">
-        <h2 class="aid-categories-details__title">Категорії допомоги</h2>
+        <div class="shelter">
+          <h3 class="shelter__name">Shelter for UA</h3>
+          <hr/>
+          <pre>Онлайн сервіс має на меті поєднувати людей у потребі житла через війну в Україні з тими, хто готовий його надати.</pre>
 
-        <ul class="aid-categories-details__accordion accordion">
-          <li class="accordion__item aid-category-detail">
-            <input class="accordion__item-input" type="radio" name="aid-categories-details-accordion-item" checked>
-            <h3 class="accordion__button aid-category-detail__button">Перелік ГО</h3>
-            <div class="accordion__content">
-              <pre class="aid-category-detail__description">
-                Впродовж трьох діб усі переміщені особи повинні стати на облік та оформити відповідне посвідчення, яке спростить отримання пільг та матеріальних виплат.
-                Це можна зробити у ЦНАПах і соціальних їдальнях, які відкриті на базі чотирьох ліцеїв міста:
-                №5 (вулиця Івана Франка, 19),
-                №9 (вулиця Гетьмана Мазепи, 169),
-                 №18 (вулиця Тролейбусна, 7),
-                №22 (вулиця Івана-Павла ІІ, 24).
-                Крім того, зареєструватися люди можуть і в інших точках міста: офіси для реєстрації працюють з 9 до 16 год. за адресами:
-                вул. Галицька, 124А (“Пасічна”);
-                вул. Гетьмана Мазепи,185 (“Бам”);
-                вул. Івана Павла ІІ, 4 (“Каскад”).
-                А також у ЦНАПах в селах громади.
-              </pre>
-
-              <a
-                class="aid-category-detail__btn-more button"
-                href=''
-                target="_blank"
-              >
-                Детальніше
-              </a>
+          <div class="shelter__details">
+            <i class="shelter__details-icon fa fa-globe"></i>
+            <div class="shelter__details-list">
+              <a class="link" href='https://www.shelter4ua.com/ua' target="_blank">https://www.shelter4ua.com/uahelter4ua.com/uahelter4ua.com/ua</a>
             </div>
-          </li>
+          </div>
 
-          <li class="accordion__item aid-category-detail">
-            <input class="accordion__item-input" type="radio" name="aid-categories-details-accordion-item">
-            <h3 class="accordion__button aid-category-detail__button">Соціальна допомога</h3>
-            <div class="accordion__content">
-              <pre class="aid-category-detail__description">
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid beatae consequatur consequuntur cupiditate debitis deserunt, facilis fugit harum maxime molestias nostrum omnis placeat, quis repellat tempore totam unde vel voluptatum?
-              </pre>
+          <div class="shelter__details">
+            <i class="shelter__details-icon fa-brands fa-facebook-f"></i>
+            <div class="shelter__details-list">
+              <a class="link" href='https://t.me/shelter_ua_bot' target="_blank">https://t.me/shelter_ua_bot</a>
             </div>
-          </li>
-
-          <li class="accordion__item aid-category-detail">
-            <input class="accordion__item-input" type="radio" name="aid-categories-details-accordion-item">
-            <h3 class="accordion__button aid-category-detail__button">Розміщення, тимчасові прихистки</h3>
-            <div class="accordion__content">
-              <a
-                class="aid-category-detail__btn-more button"
-                href='./accommodation.html'
-                target="_blank"
-              >
-                Детальніше
-              </a>
-            </div>
-          </li>
-      </ul>
+          </div>
+        </div>
+      </div>
     </section>
   </main>
 

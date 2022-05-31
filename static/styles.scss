@@ -115,6 +115,10 @@ a, .link {
   color: inherit;
 }
 
+hr {
+  margin: 1rem 0;
+}
+
 /*------- Reset -------*/
 
 a, button {
@@ -781,6 +785,10 @@ h1, h2, h3, h4, h5, p {
         padding: 1.5rem 0;
       }
 
+      &__btn-more {
+        margin-left: 0;
+      }
+
       .accordion__item-input:not(:checked) ~ .aid-category-detail__button {
         border-color: transparent;
       }
@@ -1045,4 +1053,72 @@ h1, h2, h3, h4, h5, p {
   border-top: 10px solid var(--dark-2);
   border-radius: 50%;
   animation: spinner 1.5s linear infinite;
+}
+
+/*------- Accommodation page -------*/
+
+.accommodation {
+  padding: 1.5rem 1rem;
+
+  pre {
+    font: var(--body-1);
+    white-space: pre-line;
+  }
+
+  &__title {
+    margin-bottom: 1.5rem;
+    padding-bottom: .5rem;
+  }
+}
+
+.shelter {
+  padding: 1.5rem 1rem;
+  margin-bottom: 1.5rem;
+  box-shadow: var(--box-shadow);
+  background: var(--light-1);
+  border-radius: 4px;
+
+  &__grid {
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: 1.5rem 1fr;
+  }
+
+  &__name {
+    line-height: 1.75rem;
+    padding-right: 2rem;
+  }
+
+  &__details {
+    margin-top: 1rem;
+    display: flex;
+    gap: 1rem;
+    align-items: flex-start;
+
+    &-list {
+      & > * {
+        max-width: 300px;
+        display: block;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        margin-bottom: .5rem;
+      }
+    }
+
+    &-icon {
+      text-align: center;
+      width: 20px;
+      margin-top: .2rem;
+      font-size: 1.25rem;
+      color: var(--secondary);
+    }
+
+    @media screen and (min-width: $desktop) {
+      &-list {
+        display: grid;
+        grid-gap: 0 3rem;
+        grid-template-columns: repeat(3, 1fr);
+      }
+    }
+  }
 }

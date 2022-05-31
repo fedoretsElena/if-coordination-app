@@ -99,6 +99,10 @@ a, .link {
   color: inherit;
 }
 
+hr {
+  margin: 1rem 0;
+}
+
 /*------- Reset -------*/
 a:focus, button:focus {
   outline: none;
@@ -647,6 +651,9 @@ h1, h2, h3, h4, h5, p {
   .aid-categories-details .aid-category-detail__button {
     padding: 1.5rem 0;
   }
+  .aid-categories-details .aid-category-detail__btn-more {
+    margin-left: 0;
+  }
   .aid-categories-details .aid-category-detail .accordion__item-input:not(:checked) ~ .aid-category-detail__button {
     border-color: transparent;
   }
@@ -863,6 +870,63 @@ h1, h2, h3, h4, h5, p {
   border-top: 10px solid var(--dark-2);
   border-radius: 50%;
   animation: spinner 1.5s linear infinite;
+}
+
+/*------- Accommodation page -------*/
+.accommodation {
+  padding: 1.5rem 1rem;
+}
+.accommodation pre {
+  font: var(--body-1);
+  white-space: pre-line;
+}
+.accommodation__title {
+  margin-bottom: 1.5rem;
+  padding-bottom: 0.5rem;
+}
+
+.shelter {
+  padding: 1.5rem 1rem;
+  margin-bottom: 1.5rem;
+  box-shadow: var(--box-shadow);
+  background: var(--light-1);
+  border-radius: 4px;
+}
+.shelter__grid {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: 1.5rem 1fr;
+}
+.shelter__name {
+  line-height: 1.75rem;
+  padding-right: 2rem;
+}
+.shelter__details {
+  margin-top: 1rem;
+  display: flex;
+  gap: 1rem;
+  align-items: flex-start;
+}
+.shelter__details-list > * {
+  max-width: 300px;
+  display: block;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin-bottom: 0.5rem;
+}
+.shelter__details-icon {
+  text-align: center;
+  width: 20px;
+  margin-top: 0.2rem;
+  font-size: 1.25rem;
+  color: var(--secondary);
+}
+@media screen and (min-width: 1024px) {
+  .shelter__details-list {
+    display: grid;
+    grid-gap: 0 3rem;
+    grid-template-columns: repeat(3, 1fr);
+  }
 }
 
 /*# sourceMappingURL=styles.css.map */
