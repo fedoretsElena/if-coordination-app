@@ -148,6 +148,7 @@ h1, h2, h3, h4, h5, p {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    height: 56px;
   }
 
   &__logo {
@@ -239,19 +240,14 @@ h1, h2, h3, h4, h5, p {
     }
   }
 
-  &__menu-control {
-    position: relative;
+  &__controller:checked {
+    & ~ .menu {
+      transform: translateX(0);
+    }
 
-    .hamburger-state-holder {
-      display: block;
-      position: absolute;
-      margin: 0;
-      width: 100%;
-      height: 100%;
-      top: 0;
-      left: 0;
-      opacity: 0;
-      z-index: 1;
+    & + .backdrop {
+      z-index: 4;
+      opacity: 1;
     }
   }
 }
@@ -259,6 +255,8 @@ h1, h2, h3, h4, h5, p {
 /*------- Header hamburger -------*/
 .hamburger {
   cursor: pointer;
+  width: 18px;
+  display: block;
 
   div {
     position: relative;
@@ -304,20 +302,83 @@ h1, h2, h3, h4, h5, p {
   }
 
   &__header {
+    padding: 1.5rem;
     height: 60px;
     border-bottom: 1px solid var(--dark-6);
+  }
+
+  .hamburger {
+    margin-left: auto;
+    margin-right: 0;
   }
 }
 
 .backdrop {
   top: 0;
-  left: 0;
+  left: -1.5rem;
   content: '';
   width: 100%;
   height: 100%;
-  z-index: 4;
-  position: absolute;
-  background: rgba(var(--dark-1), .4);
+  z-index: -2;
+  opacity: 0;
+  position: fixed;
+  background: rgba(#000, .4);
+}
+
+.top-nav {
+  max-height: calc(100vh - 60px);
+  overflow: auto;
+
+  &__item {
+    color: var(--dark-1);
+    padding: .9rem 1.5rem;
+    cursor: pointer;
+    font: var(--header-3);
+    line-height: 1.5rem;
+
+    &-button {
+      span {
+        margin-right: 1.5rem;
+      }
+    }
+  }
+
+  .accordion__item-input:checked ~ .top-nav__item-button.accordion__button {
+    color: var(--secondary);
+    padding-bottom: 1rem;
+
+    i {
+      transform: rotate(180deg);
+    }
+  }
+
+  &__subitem {
+    padding: 1rem 0;
+    cursor: pointer;
+    font: var(--body-1);
+  }
+
+  &__sublist {
+    margin-left: 2.5rem;
+
+    &-container {
+      padding: 0!important;
+      margin-left: -1.5rem;
+      width: calc(100% + 3rem);
+      background: var(--light-2);
+    }
+  }
+
+  svg {
+    font-size: 1.5rem;
+    color: var(--dark-4);
+    min-width: 1.5rem;
+  }
+
+  &__main {
+    margin: 1rem 0;
+    border-bottom: 1px solid var(--dark-6);
+  }
 }
 
 /*------- Back To Top Button -------*/
@@ -756,6 +817,7 @@ h1, h2, h3, h4, h5, p {
   .aid-category-detail {
     &__button {
       padding: 1rem 0;
+      color: var(--dark-4);
       border-bottom: 1px solid var(--dark-1);
     }
 
@@ -799,12 +861,18 @@ h1, h2, h3, h4, h5, p {
 /*------- Accordion  -------*/
 .accordion {
   &__button {
-    color: var(--dark-4);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
     cursor: pointer;
     margin: 0;
-    padding: 1.5rem 0;
     line-height: 1.75rem;
     transition: all 0.25s ease-in-out;
+
+    i {
+      font-size: 0.8rem;
+    }
   }
 
   .no-select, &__button {
@@ -855,9 +923,13 @@ h1, h2, h3, h4, h5, p {
     &:hover, .accordion__item-input:checked ~ .accordion__button {
       color: var(--dark-1);
     }
+
+    .accordion__item-input:checked ~ .accordion__button i {
+      transform: rotateX(180deg);
+    }
   }
 
-  &__item-input[type=radio] {
+  &__item-input {
     position: absolute;
     cursor: pointer;
     width: 100%;
